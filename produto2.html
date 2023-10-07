@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dois Amores com Morango</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; 
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ca97d092;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .store-name {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: rgb(117, 60, 117);
+        }
+
+        .produto-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        .produto-imagem-container {
+            position: relative;
+        }
+
+        .produto-imagem {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            display: none; 
+        }
+
+        .produto-imagem:first-child {
+            display: block; 
+        }
+
+        .controles {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -25px; 
+        }
+
+        .controles button {
+            background-color: #dda7a7c7;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .controles button:hover {
+            background-color: #ccc;
+        }
+
+        .descricao {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .preco {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .formas-pagamento {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .comprar-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .comprar-btn:hover {
+            background-color: darkgreen;
+        }
+
+        .voltar-container {
+            margin-top: 20px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .voltar-btn {
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #BC8F8F;
+            color: white;
+            font-weight: bold;
+        }
+
+        .voltar-btn:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo da Candy & Cakes">
+        </div>
+        <div class="store-name">
+            <h1>Candy & Cakes</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="Produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="produto-container">
+        
+        <div class="produto-imagem-container">
+            <img src="12.jpeg" alt="Produto 2 - Imagem 1" class="produto-imagem" id="produto-imagem-1">
+            <img src="11.jpeg" alt="Produto 2 - Imagem 2" class="produto-imagem" id="produto-imagem-2">
+            <img src="75.jpeg" alt="Produto 2 - Imagem 3" class="produto-imagem" id="produto-imagem-3">
+            <div class="controles">
+                <button onclick="anteriorImagem()">❮</button>
+                <button onclick="proximoImagem()">❯</button>
+            </div>
+        </div>
+
+        <div class="descricao">
+            <h2>Dois Amores com Morango</h2>
+            <p>Imaginação e sabor se unem em uma dança irresistível neste Bolo de Pão de Ló tradicional. A leveza e a esponjosidade do pão de ló abrem caminho para um mundo de indulgência quando sua colher encontra o recheio de brigadeiro branco, uma verdadeira sinfonia de doçura suave.</p>
+            <p> Mas a jornada de sabores não para por aí. Cada garfada é uma aventura: a rica e cremosa ganache de chocolate ao leite, em uma perfeita fusão com a frescura dos morangos, cria uma explosão celestial. E, como um véu de elegância, o chantilly envolve esse espetáculo de sabores, deixando uma sensação de deleite a cada mordida, fazendo deste bolo uma celebração da arte da confeitaria e um convite ao prazer culinário.</p>
+        </div>
+
+        <div class="preco">
+            Preço: R$ 70,00 kg
+        </div>
+
+        <div class="formas-pagamento">
+            <h3>Formas de Pagamento:</h3>
+            <ul>
+                <li>Cartão de crédito</li>
+                <li>Cartão de débito</li>
+                <li>Pix</li>
+            </ul>
+        </div>
+
+        <button class="comprar-btn" onclick="comprarProduto('Dois Amores com Morango')">Comprar</button>
+    </div>
+
+    <div class="voltar-container">
+        <button class="voltar-btn" onclick="voltarPagina()">Voltar</button>
+    </div>
+
+    <script>
+       
+        let currentIndex = 0;
+        const imagens = document.querySelectorAll('.produto-imagem');
+
+        function mostrarImagem() {
+            for (let i = 0; i < imagens.length; i++) {
+                if (i === currentIndex) {
+                    imagens[i].style.display = 'block';
+                } else {
+                    imagens[i].style.display = 'none';
+                }
+            }
+        }
+
+        function anteriorImagem() {
+            currentIndex = (currentIndex - 1 + imagens.length) % imagens.length;
+            mostrarImagem();
+        }
+
+        function proximoImagem() {
+            currentIndex = (currentIndex + 1) % imagens.length;
+            mostrarImagem();
+        }
+
+        function comprarProduto(nomeProduto) {
+            alert('Você comprou o produto: ' + nomeProduto);
+        }
+
+        function voltarPagina() {
+            history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ca97d092;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .store-name {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: rgb(117, 60, 117);
+        }
+
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .carousel {
+            width: 80%;
+            max-width: 100%;
+            white-space: nowrap;
+            animation: marquee 30s linear infinite;
+            display: flex;
+        }
+
+        .carousel img {
+            max-width: 100%; 
+            height: auto; 
+            width: auto; 
+            object-fit: contain; 
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #ca97d092;
+            color: #333;
+            width: 100%;
+            box-sizing: border-box;
+            bottom: 0;
+            height: auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        footer .footer-link {
+            text-decoration: none;
+            color: rgb(117, 60, 117);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0 20px;
+        }
+
+        footer .footer-link:hover {
+            color: #9c5b9c;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+                display: block;
+            }
+
+            .carousel {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo da Candy & Cakes">
+        </div>
+        <div class="store-name">
+            <h1>Candy & Cakes</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="bolos.png" alt="Slide 1">
+                <img src="Inicio.png" alt="Slide 2">
+                <img src="Qualidade.png" alt="Slide 3">
+            </div>
+        </div>
+        <p></p>
+    </main>
+
+    <footer>
+        <section id="endereco" class="endereco">
+            <br>
+            <p class="endereco-texto">Av. Papa João XXII, 123, Lages, SC, 88888-888, Fone: (99) 99999-9999</p>
+
+            <a href="Sobre Aluna.html" class="footer-link">Sobre Nós</a>
+            <a href="Trabalhe Conosco.html" class="footer-link">Trabalhe Conosco</a>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
